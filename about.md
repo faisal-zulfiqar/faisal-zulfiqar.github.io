@@ -5,7 +5,8 @@ permalink: /about/
 sidebar_link: true
 ---
 
-My name is Faisal Zulfiqar and I am a computer science senior at COMSATS University Islamabad, Lahore Campus.  
-I've developed a keen interest in the field of web development, especially in backend systems. I love to work with Ruby on Rails, Angular, NodeJS and a couple of other cool frameworks. 
-I've briefly worked as a Software Engineer for a web development agency where I worked on a Ruby on Rails project called C3Suite. I am currently on the lookout for more opportunities.  
-In my free time, I love to read books, watch video courses and contribute to open source.
+My name is Faisal Zulfiqar and I am a Computer Science graduate from <em>COMSATS University Islamabad, Lahore Campus</em>. During my 4 years at university, I got to learn a lot, I took part in seminars, workshops and participated in different programming competitions and bagged a 1st and 2nd position in two of them. I tinkered with pretty much everything and discovered that developing scalable solutions, cloud-native applications, software security, etc. excite me the most.  
+
+Currently, I spend time learning and developing <em>SaaS</em> applications. I primarily use Angular, NodeJS, Spring & Hibernate for development. I joined a software house in my senior year where I worked as a Ruby on Rails developer to maintain a Content Management Application. After that, I spent another year working on my Final Year Project which was an ERP System built with Angular & Spring.  
+
+I love to code, read books, watch documentaries and maintain my blog. When I'm free I do video courses, attend workshops / developer conferences in my city and play lots of video games. 
