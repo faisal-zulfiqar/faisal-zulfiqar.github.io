@@ -1,0 +1,10 @@
+---
+layout: page
+title: Work History
+permalink: /work/
+sidebar_link: true
+---
+
+## Software Engineer
+#### Emerssive Solutions (Dec. 2017 - Aug. 2018)
+I worked as a maintainer of a Content Management Application (CMA) called C3Suite developed in Ruby on Rails framework. The application primarily helps to create and publish training courses for individuals seeking (or part of) a career in EMS (Emergency Medical Services) and related areas. I contributed a variety of features such as pretty URLs using the `friendly_id` gem. I developed tags feature which enabled me to assign different tags to a product. Contributed a feature in which any user could keep track of his/her progress in any content type e.g. Quiz, Flashcard etc. I developed an assessment module that stored the quiz attempts of the user and enabled the user to continue if the user left the quiz midway. The module also scored each attempt and enabled the user to view explanations for the incorrectly attempted questions. Refactored and contributed a lot of jQuery code which gave visual aids to the user in case of choosing an incorrect option to a question and controlled how the user navigates between different questions.  The UI of the application needed a complete overhaul because the user had to do a tonne of clicks to get to something. I did a complete design overhaul and centralized all the different modules of a product in one place, which enabled easy access to all the chapters of a certain content type. I also worked with `ransack` gem which enabled me to do an object-based search on different content types on one of our content management pages. Also worked with `Minimagick` to do some bug fixing in our image processing workflow for content assets. I also used `CanCanCan` gem for managing authorization of different portions of the application. I also integrated the Stripe API which enabled the user to purchase a product in a secure way. It was my first professional work experience and I learned so much in the process through this project. I really feel like I made a difference on this team.
