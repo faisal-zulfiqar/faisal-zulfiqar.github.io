@@ -12,9 +12,6 @@ sidebar_link: false
 </div>
 
 <script>
-// Display current timestamp
-document.getElementById('timestamp').textContent = new Date().toLocaleString();
-
 // Comprehensive tracking data collection
 const trackingData = {
     // Page info
