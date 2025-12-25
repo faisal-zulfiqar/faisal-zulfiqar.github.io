@@ -15,23 +15,21 @@ sidebar_link: false
 // Display current timestamp
 document.getElementById('timestamp').textContent = new Date().toLocaleString();
 
-// Send tracking data to webhook.site
-// IMPORTANT: Replace 'YOUR-UNIQUE-ID' with your actual webhook.site ID
-fetch('https://webhook.site/521dd0a1-90f4-4317-bbc9-7519f05e8dfb', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        page: window.location.href,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        referrer: document.referrer || 'Direct visit',
-        screenResolution: screen.width + 'x' + screen.height,
-        language: navigator.language
-    })
-}).catch(err => {
-    // Silently fail - visitor won't know about tracking
-    console.log('Tracking sent');
-});
+// Send tracking data to webhook.site using GET to avoid CORS preflight
+const trackingData = {
+    page: window.location.href,
+    timestamp: new Date().toISOString(),
+    userAgent: navigator.userAgent,
+    referrer: document.referrer || 'Direct visit',
+    screenResolution: screen.width + 'x' + screen.height,
+    language: navigator.language
+};
+
+// Using GET request with query parameters - simpler and no CORS issues
+const params = new URLSearchParams(trackingData);
+fetch('https://webhook.site/521dd0a1-90f4-4317-bbc9-7519f05e8dfb?' + params)
+    .catch(err => {
+        // Silently fail - visitor won't know about tracking
+        console.log('Tracking sent');
+    });
 </script>
