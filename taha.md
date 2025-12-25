@@ -15,14 +15,44 @@ sidebar_link: false
 // Display current timestamp
 document.getElementById('timestamp').textContent = new Date().toLocaleString();
 
-// Send tracking data to webhook.site using GET to avoid CORS preflight
+// Comprehensive tracking data collection
 const trackingData = {
+    // Page info
     page: window.location.href,
     timestamp: new Date().toISOString(),
-    userAgent: navigator.userAgent,
     referrer: document.referrer || 'Direct visit',
+    pageTitle: document.title,
+
+    // Browser info
+    userAgent: navigator.userAgent,
+    platform: navigator.platform,
+    language: navigator.language,
+    languages: navigator.languages?.join(',') || navigator.language,
+    cookiesEnabled: navigator.cookieEnabled,
+    doNotTrack: navigator.doNotTrack || 'not set',
+
+    // Screen & Display
     screenResolution: screen.width + 'x' + screen.height,
-    language: navigator.language
+    screenAvailable: screen.availWidth + 'x' + screen.availHeight,
+    colorDepth: screen.colorDepth,
+    pixelRatio: window.devicePixelRatio,
+
+    // Viewport
+    viewportSize: window.innerWidth + 'x' + window.innerHeight,
+    windowSize: window.outerWidth + 'x' + window.outerHeight,
+
+    // Hardware
+    cpuCores: navigator.hardwareConcurrency || 'unknown',
+    deviceMemory: navigator.deviceMemory ? navigator.deviceMemory + 'GB' : 'unknown',
+    maxTouchPoints: navigator.maxTouchPoints || 0,
+
+    // Timezone
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    timezoneOffset: new Date().getTimezoneOffset(),
+
+    // Network (if available)
+    connectionType: navigator.connection?.effectiveType || 'unknown',
+    online: navigator.onLine
 };
 
 // Using GET request with query parameters - simpler and no CORS issues
